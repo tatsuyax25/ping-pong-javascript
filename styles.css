@@ -46,3 +46,11 @@ body {
     width: 2.5vh;
     height: 2.5vh;
 }
+
+.score {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 7vh;
+    color: var(--foreground-color);
+}
