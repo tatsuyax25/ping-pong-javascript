@@ -11,7 +11,8 @@ function update(time) {
     if (lastTime != null) {
         const delta = time - lastTime
         // Update code
-        // ball.update(delta)
+        ball.update(delta)
+        computerPaddle.update(delta, ball.y)
     }
 
     lastTime = time
