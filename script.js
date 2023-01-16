@@ -13,10 +13,19 @@ function update(time) {
         // Update code
         // ball.update(delta)
         computerPaddle.update(delta, ball.y)
+
+        if (isLose()) {
+            console.log("lose")
+        }
     }
 
     lastTime = time
     window.requestAnimationFrame(update)
+}
+
+function isLose() {
+    const rect = ball.rect()
+    return rect.right >= window.innerWidth || rect.left <= 0
 }
 
 document.addEventListener("mousemove", e => {
